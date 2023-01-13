@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Futura', sans-serif;
   height: 100vh;
 }
 
@@ -48,7 +48,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #131232;
   margin-bottom: 60px;
 }
 
@@ -76,6 +76,7 @@ h3 {
 }
 
 .heading {
+  color: rgb(0, 0, 0);
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 50px;
@@ -83,6 +84,7 @@ h3 {
 }
 
 .heading p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #828282;
 }
 
@@ -138,9 +140,9 @@ h3 {
 
 .btn {
   padding: 10px 20px;
-  border: 1px solid #000;
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 5px;
-  background: #000;
+  background: rgb(50, 97, 173);
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -398,6 +400,7 @@ footer {
 
   .ticket-created h2,
   .heading h1 {
+    background-color: #22178a;
     font-size: 2rem;
   }
 
