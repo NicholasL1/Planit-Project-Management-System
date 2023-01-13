@@ -8,11 +8,11 @@ function Home() {
         <h2>This application can be used for project management.</h2>
         <h4>
           To use it, you must create an account by clicking 'Register' on the top right.
-          You can then create stories, bug fixes, or issues and raise them for public discussion under your account.
+          You can then create tasks, subtasks, bugs, etc. and raise them for discussion under your account.
         </h4>
       </section>
       <section className="heading">
-        <h1>What do you need help with?</h1>
+        <h1>What would you like to do?</h1>
         <p>Please choose from an option below</p>
       </section>
 
