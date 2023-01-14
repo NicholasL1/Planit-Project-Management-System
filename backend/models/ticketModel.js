@@ -9,7 +9,7 @@ const ticketSchema = mongoose.Schema({
   issue: {
     type: String,
     required: [true, 'Please select an issue'],
-    enum: ['Task', 'Subtask', 'Epic', 'Bug', 'Story', 'Change', 'IT Help', 'Incident', 'New Feature', 'Problem', 'Service Request', 'Support'],
+    enum: ['Task', 'Subtask', 'Epic', 'Bug', 'Story', 'Change', 'IT Help', 'New Feature', 'Problem', 'Service Request', 'Support'],
   },
   description: {
     type: String,
