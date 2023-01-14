@@ -24,7 +24,8 @@ export const register = createAsyncThunk(
 
       return thunkAPI.rejectWithValue(message)
     }
-  })
+  }
+)
 
 // Login existing user
 export const login = createAsyncThunk(
