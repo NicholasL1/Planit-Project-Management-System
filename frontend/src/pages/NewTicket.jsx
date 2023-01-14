@@ -10,6 +10,7 @@ function NewTicket() {
   const { user } = useSelector((state) => state.auth)
   const { isLoading, isError, isSuccess, message } = useSelector((state) => state.tickets)
 
+  const [title, setTitle] = useState('');
   const [name, setName] = useState(user.firstName)
   const [issue, setIssue] = useState('Task')
   const [description, setDescription] = useState('')
@@ -32,7 +33,7 @@ function NewTicket() {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    dispatch(createTicket({ name, issue, description }))
+    dispatch(createTicket({ title, name, issue, description }))
   }
 
   if (isLoading) {
@@ -49,6 +50,10 @@ function NewTicket() {
 
       <section className="form">
         <form onSubmit={onSubmit}>
+          <div className="form-group">
+            <label htmlFor="title">Ticket Title</label>
+            <input type="text" className="form-control" value={title} placeholder='Enter title' onChange={(e) => setTitle(e.target.value)} />
+          </div>
           <div className="form-group">
             <label htmlFor="name">Assignee</label>
             <input type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
@@ -70,12 +75,12 @@ function NewTicket() {
             </select>
           </div>
           <div className="form-group">
-            <label htmlFor="description">Issue Description</label>
+            <label htmlFor="description">Description</label>
             <textarea
               name="description"
               id="description"
               className='form-control'
-              placeholder='Description'
+              placeholder='Issue Description'
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             ></textarea>

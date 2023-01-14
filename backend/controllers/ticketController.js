@@ -51,11 +51,11 @@ const getTicket = asyncHandler(async (req, res) => {
 // @route POST /api/tickets
 // @access Private
 const createTicket = asyncHandler(async (req, res) => {
-  const { issue, description } = req.body
+  const { title, name, issue, description } = req.body
 
-  if (!issue || !description) {
+  if (!title || !name || !issue || !description) {
     res.status(400)
-    throw new Error('Please add an issue type and description!')
+    throw new Error('Please add all required fields!')
   }
 
   // Get user using the id in the jWT
@@ -67,6 +67,8 @@ const createTicket = asyncHandler(async (req, res) => {
   }
 
   const ticket = await Ticket.create({
+    title,
+    name,
     issue,
     description,
     user: req.user.id,
