@@ -86,6 +86,7 @@ function Ticket() {
         <h3>Date Created: {new Date(ticket.createdAt).toLocaleString('en-US')}</h3>
         <h3 style={{ color: 'gray' }}>Type of Issue: {ticket.issue}</h3>
         <h3 style={{ color: 'gray' }}>Assignee: {ticket.name}</h3>
+        <h3 style={{ color: 'gray' }}>Reporter: {ticket.reporter}</h3>
         <hr />
         <div className="ticket-desc">
           <h3><u>Description</u></h3>

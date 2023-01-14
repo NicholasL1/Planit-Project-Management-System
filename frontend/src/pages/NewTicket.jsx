@@ -11,9 +11,10 @@ function NewTicket() {
   const { isLoading, isError, isSuccess, message } = useSelector((state) => state.tickets)
 
   const [title, setTitle] = useState('');
-  const [name, setName] = useState(user.firstName)
+  const [name, setName] = useState('')
   const [issue, setIssue] = useState('Task')
   const [description, setDescription] = useState('')
+  const [reporter, setReporter] = useState(user.firstName)
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -33,7 +34,7 @@ function NewTicket() {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    dispatch(createTicket({ title, name, issue, description }))
+    dispatch(createTicket({ title, name, issue, description, reporter }))
   }
 
   if (isLoading) {
@@ -56,7 +57,7 @@ function NewTicket() {
           </div>
           <div className="form-group">
             <label htmlFor="name">Assignee</label>
-            <input type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
+            <input type="text" className="form-control" value={name} placeholder='Enter Assignee' onChange={(e) => setName(e.target.value)} />
           </div>
           <div className="form-group">
             <label htmlFor="issue">Issue</label>
@@ -84,6 +85,10 @@ function NewTicket() {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             ></textarea>
+          </div>
+          <div className="form-group">
+            <label htmlFor="name">Reporter</label>
+            <input type="text" className="form-control" value={reporter} onChange={(e) => setReporter(e.target.value)} />
           </div>
           <div className="form-group">
             <button className="btn btn-block">Submit</button>

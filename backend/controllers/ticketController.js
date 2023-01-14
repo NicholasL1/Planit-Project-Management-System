@@ -51,9 +51,9 @@ const getTicket = asyncHandler(async (req, res) => {
 // @route POST /api/tickets
 // @access Private
 const createTicket = asyncHandler(async (req, res) => {
-  const { title, name, issue, description } = req.body
+  const { title, name, issue, description, reporter } = req.body
 
-  if (!title || !name || !issue || !description) {
+  if (!title || !name || !issue || !description || !reporter) {
     res.status(400)
     throw new Error('Please add all required fields!')
   }
@@ -72,6 +72,7 @@ const createTicket = asyncHandler(async (req, res) => {
     issue,
     description,
     user: req.user.id,
+    reporter,
     status: 'Open'
   })
 
