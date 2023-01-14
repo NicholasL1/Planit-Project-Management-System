@@ -53,7 +53,7 @@ function Ticket() {
         <h3 style={{ color: 'gray' }}>Assignee: {ticket.name}</h3>
         <hr />
         <div className="ticket-desc">
-          <h3>Description of Issue</h3>
+          <h3><u>Description</u></h3>
           <p>{ticket.description}</p>
         </div>
       </header>
