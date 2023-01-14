@@ -24,3 +24,7 @@ The project was build in the MERN software stack (MongoDB, Express, React, Node)
 
 ![image](https://user-images.githubusercontent.com/77363160/212462146-19a6b08e-d1bf-468c-84be-d3cf5b3ec2e4.png)
 ###### View ticket UI
+
+![image](https://user-images.githubusercontent.com/77363160/212462193-116d8a4b-1ea7-4ff2-94a7-3652a75c1ff6.png)
+![image](https://user-images.githubusercontent.com/77363160/212462220-84c41947-6667-48c2-ad8d-01ee51c5bc96.png)
+###### View ticket UI with added note
