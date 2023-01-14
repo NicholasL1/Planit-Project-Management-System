@@ -8,6 +8,11 @@ function Home() {
         <h2>This application can be used for project management.</h2>
         <h4>
           To use it, you must create an account by clicking 'Register' on the top right.
+        </h4>
+        <h4>
+          If you already have an account, you can use this service by logging in.
+        </h4>
+        <h4>
           You can then create tasks, subtasks, bugs, etc. and raise them for discussion under your account.
         </h4>
       </section>
@@ -20,7 +25,7 @@ function Home() {
         <FaQuestionCircle /> Create new ticket
       </Link>
 
-      <Link to='/ticket' className="btn btn-block">
+      <Link to='/tickets' className="btn btn-block">
         <FaTicketAlt /> View my tickets
       </Link>
     </>
