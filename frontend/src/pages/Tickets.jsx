@@ -29,7 +29,6 @@ function Tickets() {
       <h1>Tickets</h1>
       <div className="tickets">
         <div className="ticket-headings">
-          <div>Title</div>
           <div>Created</div>
           <div>Issue</div>
           <div>Status</div>
