@@ -1,7 +1,7 @@
 {
   "name": "management-system",
   "version": "1.0.0",
-  "description": "Project Management App",
+  "description": "PlanIt",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
