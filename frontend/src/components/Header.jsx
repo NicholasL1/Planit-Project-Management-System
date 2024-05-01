@@ -18,7 +18,7 @@ function Header() {
   return (
     <div className='header'>
       <div className="logo">
-        <Link to='/'>PlanIt - Project Management System</Link>
+        <Link to='/'>Plan it!</Link>
       </div>
       <ul>
         {user ? (
